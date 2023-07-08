@@ -18,6 +18,7 @@ const Homepage = () => {
 
   return (
     <>
+{/* Landing page CryptoNova icon with quote */}
       <div className="homepage-img flex-container">
 
         <div className="homepage-background">
@@ -28,13 +29,15 @@ const Homepage = () => {
 
         </div>
       </div>
-
+      
+{/* Top 10 cryptos display  */}
       <div className="home-heading-container">
         <Title level={2} className="home-title">Top Cryptocurrencies by MarketCap</Title>
         <Title level={3} className="show-more"><Link to="/cryptocurrencies">Show more</Link></Title>
       </div>
       <Cryptocurrencies simplified />
-
+      
+{/*Crypto News display  */}
       <div className="home-heading-container">
         <Title level={2} className="home-title">Latest Crypto News</Title>
         <Title level={3}><Link to="/news">Show more</Link></Title>
@@ -42,6 +45,7 @@ const Homepage = () => {
 
       <News simplified />
 
+{/* Global crypto stats Component */}
       <Title level={2} className="heading stats-heading">Global Crypto Stats</Title>
       <Row gutter={[32, 32]}>
         <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
